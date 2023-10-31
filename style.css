@@ -334,9 +334,15 @@ th, td {
     text-align: left;
 }
 
+/*kind of a bad way of doing this but ok*/
 #projectsScroller {
     position: absolute;
-    top: 380px;
+    top: 400px;
+}
+
+#aboutMeScroller {
+    position: absolute;
+    top: 1162px;
 }
 
 .highlightable{
@@ -440,14 +446,28 @@ form input, form textarea {
 
 form button{
     padding: 15px;
-    margin: 20px auto 0;
+    margin: 0 auto 0;
     background: white;
     font-size: 18px;
     border: 0;
-    border-radius: 30px;
+    border-radius: 10px;
     outline: none;
     cursor: pointer;
     width: 150px;
+}
+
+form img{
+    width: 75px;
+}
+
+form a {
+    text-decoration: none;
+}
+
+#contactButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .headerLight {

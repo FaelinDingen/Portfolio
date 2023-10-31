@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description"
+          content="Faelin Dingeman's Portfolio about gamedevelopment, design and more">
+    <meta name="keywords"
+          content="programming, portfolio, game, development, game development, faelin dingeman, html, css, javascript, unity, c#, gamedev, game design">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=-0.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap"
@@ -15,7 +19,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
     <script type="text/javascript">
-        (function(){
+        (function () {
             emailjs.init("yAPJEOm2VfUC97rx6");
         })();
     </script>
@@ -43,6 +47,9 @@
 
 <div class="textFlexContainer" id="aboutMe">
     <p class="flexItem" id="profecion">Software Developer</p>
+<!--    remove translate after finishing assignment-->
+<!--    <p id="google_translate_element"></p>-->
+
     <p class="flexItem" id="aboutMeText">Hey there! I'm Faelin, a 17-year-old software developer and avid game
         enthusiast hailing from Noord Brabant, Netherlands.
         <br>
@@ -74,6 +81,7 @@
         You're welcome to browse through my portfolio, and if you have any questions, don't hesitate to contact me.
         <!--maybe a :) or something -->
     </p>
+    <div id="aboutMeScroller"></div>
 </div>
 
 <div class="opacityWave1">
@@ -203,7 +211,8 @@
                     <p class="unity">Unity</p>
                 </div>
                 <p class="cardText">
-                    Goldfish Dreams is a high-speed game jam creation inspired by classics like Post Void and Hotline Miami.
+                    Goldfish Dreams is a high-speed game jam creation inspired by classics like Post Void and Hotline
+                    Miami.
                     Developed in just 2 days with the help of two friends, this project pushed our creative boundaries,
                     resulting in a snappy game that showcases our dedication and teamwork under tight deadlines.
                 </p>
@@ -232,34 +241,54 @@
         simply, 0% means I'm just starting, and 100% signifies mastery. </p>
     <div class="skillFlexContainerBG">
         <div class="skillFlexContainer">
-            <p class="hidden">C#</p>
-            <p class="skillProficiency hidden">100 %</p>
-        </div>
-    </div>
-    <div class="skillFlexContainerBG">
-        <div class="skillFlexContainer">
-            <p class="hidden">BLENDER</p>
-            <p class="skillProficiency hidden">75 %</p>
-        </div>
-    </div>
-    <div class="skillFlexContainerBG">
-        <div class="skillFlexContainer">
             <p class="hidden">UNITY</p>
-            <p class="skillProficiency hidden">70 %</p>
+            <p class="skillProficiency hidden">50 %</p>
         </div>
     </div>
     <div class="skillFlexContainerBG">
         <div class="skillFlexContainer">
-            <p class="hidden">UNREAL5</p>
+            <p class="hidden">C#</p>
+            <p class="skillProficiency hidden">50 %</p>
+        </div>
+    </div>
+    <div class="skillFlexContainerBG">
+        <div class="skillFlexContainer">
+            <p class="hidden">JS</p>
+            <p class="skillProficiency hidden">30 %</p>
+        </div>
+    </div>
+    <div class="skillFlexContainerBG">
+        <div class="skillFlexContainer">
+            <p class="hidden">HTML</p>
+            <p class="skillProficiency hidden">30 %</p>
+        </div>
+    </div>
+    <div class="skillFlexContainerBG">
+        <div class="skillFlexContainer">
+            <p class="hidden">Css</p>
             <p class="skillProficiency hidden">25 %</p>
         </div>
     </div>
     <div class="skillFlexContainerBG">
         <div class="skillFlexContainer">
-            <p class="hidden">GEDOT</p>
+            <p class="hidden">Java</p>
             <p class="skillProficiency hidden">20 %</p>
         </div>
     </div>
+
+<!--    enable when i acutally have experience-->
+<!--    <div class="skillFlexContainerBG">-->
+<!--        <div class="skillFlexContainer">-->
+<!--            <p class="hidden">UNREAL5</p>-->
+<!--            <p class="skillProficiency hidden">0 %</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="skillFlexContainerBG">-->
+<!--        <div class="skillFlexContainer">-->
+<!--            <p class="hidden">GEDOT</p>-->
+<!--            <p class="skillProficiency hidden">0 %</p>-->
+<!--        </div>-->
+<!--    </div>-->
 </div>
 
 <div class="tilt">
@@ -274,9 +303,37 @@
         <input type="text" id="contactName" placeholder="Your Name" required>
         <input type="email" id="contactEmail" placeholder="Email" required>
         <textarea id="contactMessage" rows="4" placeholder="Your Message" required></textarea>
-        <button type="submit" onclick="sendMail()">Send</button>
+        <div id="contactButtons">
+            <div>
+
+            <button type="submit" onclick="sendMail()" id="contactSendButton">Send</button>
+            </div>
+            <div>
+                <a href="https://github.com/FaelinDingen" target="_blank">
+                    <img src="media/github.svg" alt="Github icon">
+                </a>
+                <a href="https://www.linkedin.com/in/faelin-dingeman-b374b4250//FaelinDingen" target="_blank">
+                    <img src="media/linkedin.svg" alt="Linkedin icon">
+                </a>
+                <a href="https://www.youtube.com/channel/UCKL-GHpO4kPl53nYxrmeydg" target="_blank">
+                    <img src="media/youtube.png" alt="Youtube icon">
+                </a>
+            </div>
+        </div>
     </form>
 </div>
+
+<!-- remove translate when assignment is done -->
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {pageLanguage: "en"},
+            "google_translate_element"
+        );
+    }
+</script>
+
 <script src="main.js"></script>
 </body>
 </html>
