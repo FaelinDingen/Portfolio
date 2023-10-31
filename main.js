@@ -4,7 +4,8 @@ const headerButtons = document.getElementsByClassName("headerButton");
 const headerBar = document.querySelector(".menuBar");
 const myName = document.getElementById("myName");
 const projectsScroller = document.getElementById("projectsScroller");
-const aboutMeText = document.getElementById("aboutMeText");
+const aboutMeText = document.getElementById("aboutMeScroller");
+const contactScroller = document.getElementById("contactSendButton");
 const aboutButton = document.getElementById("aboutButton");
 const projectsButton = document.getElementById("projectsButton");
 const contactButton = document.getElementById("contactButton");
@@ -15,7 +16,7 @@ const progressBar = document.getElementById("progressBar");
 const destinations = undefined;
 let cardsObserved = 0;
 let canScroll = true;
-let totalHeight = document.body.scrollHeight - window.innerHeight;
+let totalHeight = undefined;
 let showSkillCounter = 0;
 let justScrolledFromOtherPage = "1";
 
@@ -42,7 +43,7 @@ projectsButton.addEventListener("click", function () {
     scrollToSomewhere(projectsScroller);
 });
 contactButton.addEventListener("click", function () {
-    scrollToSomewhere(aboutMeText);
+    scrollToSomewhere(contactScroller);
 });
 headerObserver.observe(scrollwatcher);
 cardObserver.observe(cards[1]);
@@ -74,6 +75,10 @@ function checkHeader() {
 }
 
 function scroll() {
+    if (totalHeight == null) {
+        setTotalHeight();
+    }
+
     let progressHeight = (window.scrollY / totalHeight) * 100;
     progressBar.style.height = progressHeight + "%";
 }
@@ -168,9 +173,13 @@ function inRange(value, destination) {
 function minimalizeVideo() {
     if (canScroll && window.scrollY < 300) {        //might have some problems with smaller screens
 
-        console.log("scrolled");
         videoHeight.style.minHeight = 70 + "vh";
+        setTimeout(setTotalHeight, 1000);
     }
+}
+
+function setTotalHeight() {
+    totalHeight = document.body.scrollHeight - window.innerHeight;
 }
 
 function gotoTop() {
@@ -198,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(scrollToSection);
         //sets var to on what button it pressed to come here for 100ms so that the headerchecker works
         justScrolledFromOtherPage = scrollToSection;
-        setTimeout(resetJustScrolledFromOtherPage, 100)
+        setTimeout(resetJustScrolledFromOtherPage, 100);
         localStorage.removeItem("scrollToLocation");
         switch (scrollToSection) {
             case "1":               //need to update de scroll to things every time i change the website size. it might be buggy
@@ -211,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 window.scrollTo(0, 1500);
                 break;
             case "4":
-                window.scrollTo(0, 1500);
+                window.scrollTo(0, 9999);
                 break;
         }
     }
