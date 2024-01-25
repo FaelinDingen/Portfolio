@@ -1,0 +1,682 @@
+body {
+    background-color: #1e2535;
+    color: white;
+    margin: 0;
+    font-family: "Roboto Mono";
+    text-align: center;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body p {
+    line-height: 2em;
+}
+
+.project .menuBar {
+    position: fixed;
+    width: 100vw;
+}
+
+.shine {
+    background-image: url("media/shine/shineBG.webp");
+}
+
+.fidgetRunner {
+    background-image: url("media/fidgetrunner/fidgetBannerBG.webp");
+}
+
+.rAndR {
+    background-image: url("media/r&r/rifles&RevelationsBG.webp");
+}
+
+.modernPong {
+    background-image: url("media/modernpong/modernPongBG.webp");
+}
+
+.blenderPage {
+    background-image: url("media/3d/3DBG.webp");
+}
+
+.goldfishDreams {
+    background-image: url("media/goldfishdreams/goldfishdreamsBG.webp");
+}
+
+.grangalyGrove {
+    background-image: url("media/grangalysgrove/grangalygrovebg.webp");
+}
+
+.project {
+    text-align: left;
+}
+
+#backgroundImage {
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* set scale to 1.1 to stop blue bleeding from edges*/
+    scale: 1.1;
+    /* vw so that it doesnt unblur when zoomed out. 1vw = 10px cause 1080*/
+    filter: blur(1vw);
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    /* height gets automatically calculated on load in js */
+    height: 1px;
+}
+
+th, td {
+    padding: 5px;
+}
+
+.noStyle {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project .textFlexContainer {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 1000px;
+}
+
+.mainPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page {
+    width: 100%;
+}
+
+#videoWraper {
+    transition: min-height 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh; /*might not even do anything*/
+}
+
+#videoBG {
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%; /*might need to change to vh or vw*/
+    min-height: 100%;
+    width: 100%; /*some problems with scaling screen size*/
+}
+
+#maximizeArrow {
+    position: absolute;
+    align-self: flex-end;
+    transition: all .1s ease-out;
+    opacity: .5;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#maximizeArrow:hover {
+    opacity: 1;
+    margin-bottom: 15px;
+}
+
+.menuBar {
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    position: sticky;
+    top: 0;
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    backdrop-filter: blur(2px) saturate(0%) opacity(1);
+    transition: backdrop-filter .5s ease-out;
+    min-height: 65px;
+}
+
+.barColord {
+    /*background-color: rgba(0, 0, 0, 0);*/
+    backdrop-filter: blur(2px) saturate(0%) opacity(0);
+}
+
+#myName {
+    transition: margin-right .5s ease-out, color .5s ease-out;
+    font-size: 40px;
+    /*max-font-size: 40px;*/
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    white-space: nowrap;
+}
+
+.nameGoLeft {
+    margin-right: 75%;
+}
+
+
+.headerButton {
+    transition: opacity, margin-left, .5s ease-out;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    position: absolute;
+}
+
+.headerButton1 {
+    margin-left: 30%;
+}
+
+.headerButton2 {
+    margin-left: 55%;
+}
+
+.headerButton3 {
+    margin-left: 80%;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.textFlexContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.projectPage {
+    margin: 100px 0 100px 0;
+    /*padding: 0 100px 50px 100px;*/
+    border: 1px solid #7f7f7f;
+    border-radius: 15px;
+}
+
+.projectTextContainer {
+    margin: 0 50px 25px 50px;
+}
+
+.gifOrImage {
+    max-width: 100%;
+
+}
+
+#aboutMe {
+    margin-bottom: 200px;
+}
+
+.flexItem {
+    text-align: left;
+    max-width: 50%;
+}
+
+.flexHeader {
+    text-align: left;
+    font-size: 45px;
+    margin: 75px 0 75px 0;
+}
+
+.pageTitle {
+    text-align: center;
+    font-size: 100px;
+    font-weight: bold;
+    margin: 0;
+}
+
+#profecion {
+    font-size: 20px;
+    margin: 0 0 20px 0;
+}
+
+.whiteSpace {
+    padding-bottom: 500px;
+}
+
+#projects {
+    background: linear-gradient(#010816, #010509);
+    position: relative;
+    top: -200px;
+    padding-bottom: 100px;
+}
+
+.cardFlexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.card {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: #01060d;
+    overflow: hidden;
+    border: 2px solid #7f7f7f;
+    box-shadow: none;
+    border-radius: 20px;
+    transition: border .3s ease-out, box-shadow .3s ease-out, scale .3s ease-out;
+    width: 350px;
+    height: 500px;
+    z-index: 3;
+}
+
+.cardGoRight {
+    opacity: 0;
+    animation: cardRight .7s ease-out 0s 1 normal both;
+    z-index: 2;
+}
+
+.cardGoLeft {
+    opacity: 0;
+    animation: cardLeft .7s ease-out 0s 1 normal both;
+    z-index: 2;
+}
+
+.card:hover {
+    border: 2px solid rgba(94, 229, 255, 0.85);
+    box-shadow: -1px -1px 52px -15px rgba(94, 229, 255, 0.85);
+    scale: 110%;
+}
+
+.cardName {
+    position: absolute;
+    line-height: normal;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 0 0 0 0;
+    font-size: 40px;
+    width: 400px;
+    height: 60px;
+    z-index: 2;
+    color: #ffffff;
+}
+
+.cardBannerImage {
+    width: 350px;
+    height: 200px;
+    position: relative;
+    top: 0; /*might not need this */
+}
+
+.resources {
+    display: flex;
+    gap: 10px;
+}
+
+.resources p {
+    margin: 5px 0 0 0;
+    padding: 0 10px 0 10px;
+    line-height: 1.5em;
+    border-radius: 1000px;
+    color: black;
+
+}
+
+.cs {
+    background-color: #5bdb7b;
+    box-shadow: 0 0 15px #5bdb7b;
+}
+
+.android {
+    background-color: #88db2c;
+    box-shadow: 0 0 15px #88db2c;
+}
+
+.blender {
+    background-color: #dbb365;
+    box-shadow: 0 0 15px #dbb365;
+}
+
+.unity {
+    background-color: rgba(94, 229, 255, 0.85);
+    box-shadow: 0 0 15px rgba(94, 229, 255, 0.85);
+}
+
+.cardText {
+    color: white;
+    padding: 0 20px 0 20px;
+    margin: 0;
+    line-height: 1.6em;
+    text-align: left;
+}
+
+/*kind of a bad way of doing this but ok*/
+#projectsScroller {
+    position: absolute;
+    top: 400px;
+}
+
+#aboutMeScroller {
+    position: absolute;
+    top: 1162px;
+}
+
+.highlightable {
+    cursor: pointer;
+}
+
+.highlightable:hover {
+    transition: color .5s ease-out;
+    color: #00fff8;
+}
+
+.skillsContainerFlexContainer {
+    display: flex;
+    position: relative;
+    top: -150px;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.skillsContainerFlexContainer h1 {
+    margin: 0 0 -50px 0;
+}
+
+.skillFlexContainerBG {
+    width: 60vw;
+    height: 25px;
+    background-color: #01060d;
+    border-radius: 99999px;
+}
+
+.skillFlexContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0vw;
+    height: 25px;
+    background-color: #00dbd2;
+    border-radius: 99999px;
+    box-shadow: 0 0 10px rgba(94, 229, 255, 0.85);
+    transition: width 4s ease-out;
+}
+
+.filled {
+    width: 60vw;
+}
+
+.skillFlexContainer p {
+    color: black;
+    font-weight: bold;
+}
+
+.skillFlexContainer p:nth-child(1) {
+    transition: opacity 2s ease-in-out;
+    flex: 1;
+    margin-left: 42px;
+}
+
+.skillFlexContainer p:nth-child(2) {
+    transition: opacity 2s ease-in-out;
+    width: 30px;
+    flex: 0;
+    margin-right: 12px;
+}
+
+.contactMeContainer {
+    background-color: #010816;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+form {
+    width: 90%;
+    max-width: 800px;
+    border: 2px solid rgba(94, 229, 255, 0.85);
+    /* i should make a cool effect where the glow glows and stuff */
+    box-shadow: 0 0 15px rgba(94, 229, 255, 0.85);
+    border-radius: 10px;
+    padding: 2vw 4vw;
+    background-color: #001330;
+    display: flex;
+    flex-direction: column;
+}
+
+form h1 {
+    font-size: 50px;
+    margin: 0 0 20px 0;
+}
+
+form input, form textarea {
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: white;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+form button {
+    padding: 15px;
+    margin: 0 auto 0;
+    background: white;
+    font-size: 18px;
+    border: 0;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+}
+
+form img {
+    width: 75px;
+}
+
+form a {
+    text-decoration: none;
+}
+
+#contactButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerLight {
+    font-weight: 80;
+}
+
+/*svgs*/
+.opacityWave1 {
+    position: relative;
+    top: -199px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.opacityWave1 svg {
+    position: relative;
+    display: block;
+    width: calc(127% + 1.3px);
+    height: 135px;
+}
+
+.opacityWave1 .shape-fill {
+    fill: #010816;
+}
+
+.opacityWave2 {
+    position: relative;
+    top: -200px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.opacityWave2 svg {
+    position: relative;
+    display: block;
+    width: calc(127% + 1.3px);
+    height: 135px;
+    transform: rotateY(180deg);
+}
+
+.opacityWave2 .shape-fill {
+    fill: #010509;
+}
+
+.tilt {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.tilt svg {
+    position: relative;
+    display: block;
+    width: calc(140% + 1.3px);
+    height: 120px;
+    transform: rotateY(180deg);
+}
+
+.tilt .shape-fill {
+    fill: #010816;
+}
+
+/*scrollbar*/
+::-webkit-scrollbar {
+    width: 0px;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 0; /*change to 10px and comment out the 2 empty divs in html if u want to use the real scrollbar*/
+    background: linear-gradient(to top, #00fff8, rgba(0, 255, 248, 0)); /*15004d*/
+    filter: blur(30px);
+    /*border-radius: 10px;*/
+}
+
+/*cool selection colour*/
+::selection {
+    background-color: rgba(94, 229, 255, 0.85);
+    color: black;
+}
+
+#scrollPath {
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: rgb(40, 40, 40);
+}
+
+#progressBar {
+    z-index: 7;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    background: linear-gradient(to top, #00fff8, #15004d);
+}
+
+#progressBar:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #00fff8, #15004d);
+    filter: blur(10px);
+}
+
+#progressBar:after { /* no idea what this does */
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #00fff8, #15004d);
+    filter: blur(30px);
+}
+
+/*animations*/
+
+@keyframes cardRight {
+    0% {
+        opacity: 0;
+        transform: translateX(400px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes cardLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*compatibility*/
+
+@media (max-width: 767px) {
+    .nameGoLeft {
+        margin-right: 50%;
+    }
+
+    .flexItem {
+        max-width: 80%;
+    }
+}
+
+/* Example for small screens (up to 767px) */
+@media (max-width: 767px) {
+    .menuBar {
+        /* Adjust properties for small screens */
+        gap: 20px;
+        font-size: 16px;
+    }
+}
+
+/* Example for medium screens (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .menuBar {
+        /* Adjust properties for medium screens */
+        gap: 40px;
+        font-size: 18px;
+    }
+}
+
+/* Example for large screens (992px and above) */
+@media (min-width: 992px) {
+    .menuBar {
+        /* Adjust properties for large screens */
+        gap: 100px;
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+          content="Faelin Dingeman's Portfolio about gamedevelopment, design and more">
+    <meta name="keywords"
+          content="programming, portfolio, game, development, game development, faelin dingeman, unity, c#, gamedev, game design, goldfish dreams, shooter">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=-0.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap"
+          rel="stylesheet">
+    <title>Goldfish Dreams</title>
+</head>
+<!-- add project class to classes in body -->
+<body class="project">
+<div id="backgroundImage" class="goldfishDreams"></div>
+<div id="progressBar"></div>
+<div id="scrollPath"></div>
+
+<div class="menuBar">
+    <p class="nameGoLeft highlightable headerItem" id="myName">Faelin Dingeman</p>
+    <p class="highlightable visible headerButton headerButton1 headerItem" id="aboutButton">ABOUT</p>
+    <p class="highlightable visible headerButton headerButton2 headerItem" id="projectsButton">PROJECTS</p>
+    <p class="highlightable visible headerButton headerButton3 headerItem" id="contactButton">CONTACT</p>
+</div>
+
+<!-- fill in information -->
+<div class="mainPage">
+    <div class="textFlexContainer projectPage">
+        <h1 class="pageTitle">Goldfish Dreams</h1>
+        <table>
+            <tr>
+                <th>Project Status</th>
+                <td>Finished</td>
+            </tr>
+            <tr>
+                <th>Project Type</th>
+                <td>Game Jam</td>
+            </tr>
+            <tr>
+                <th>Project Duration</th>
+                <td>2 days</td>
+            </tr>
+            <tr>
+                <th>Engine</th>
+                <td>Unity</td>
+            </tr>
+            <!--delete if redundant-->
+            <tr>
+                <th>Role</th>
+                <td>Main Programmer / <br> designer / Audio Designer</td>
+            </tr>
+        </table>
+
+        <div class="projectTextContainer">
+            <h1>About Goldfish Dreams</h1>
+            <p>
+                Goldfish Dreams was a game I developed with the help of two close friends.
+                We participated in a game jam, and the theme that caught our attention was "Goldfish Dreams."
+                I took on the role of project manager and main developer, while my friends, an artist and a composer,
+                contributed their talents to the game. In just two days, we created a game that I'm incredibly proud of,
+                where players control a fish that jumps between bodies and uses them to defeat opponents,
+                drawing inspiration from games like Hotline Miami and Post Void. The experience was a thrilling adventure,
+                and the result is a game that showcases our collective creativity and hard work.
+            </p>
+
+            <h1>Features</h1>
+
+            <h2>High Octane Gameplay</h2>
+            <video class="gifOrImage" autoplay muted loop>
+                <source src="../media/goldfishdreams/gameplay.mp4" type="video/mp4">
+            </video>
+            <p>
+                I really wanted to make the game feel snappy and fast. To achieve this is I added deep and impactful sfx,
+                the perfect amount of screen shake, tight and responsive controls and a fast retry with no reloads.
+                It looked like I nailed it as I got a lot of praise for the controls, screenshake and sound effects.
+            </p>
+
+            <h2>Switching Bodies</h2>
+            <video class="gifOrImage" autoplay muted loop>
+                <source src="../media/goldfishdreams/body.mp4" type="video/mp4">
+            </video>
+            <p>
+                So in this game you play as a fish that wants to take down "Goldfish Corp". However, you are a fish.
+                So to take them down you take over other peoples bodies and use their bodies and weapons to achieve your goal.
+                You cant reload as a fish as that requires too much brain power so when empty you need to switch body to get a fresh gun.
+                When switching you abandon your current body and jump towards an enemy.
+                While in fish form you cant take damage from bullets but if you miss an enemy you will quickly die from getting slammed against a wall.
+                When you hit an enemy you take them over and control your new container, and you get the gun they were using.
+            </p>
+
+            <h2>Guns</h2>
+            <video class="gifOrImage" autoplay muted loop>
+                <source src="../media/goldfishdreams/guns.mp4" type="video/mp4">
+            </video>
+            <p>
+                The primary way of attack is via shooting. So I added multiple guns.
+                Every gun has their own use-cases.
+                The revolver is reliable and accurate, The shotgun is powerful but has low ammo and very inaccurate
+                and then there is the rifle which shoots fast, is accurate and has high ammo but is hard to get your hands on.
+            </p>
+
+            <h2>Upgrades</h2>
+            <video class="gifOrImage" autoplay muted loop>
+                <source src="../media/goldfishdreams/upgrades.mp4" type="video/mp4">
+            </video>
+            <p>
+                At the end of each stage you get a random selection of upgrades that you can pick 1 of to use.
+                I implemented these to keep the game new and refreshing, and it keeps players coming back to try and make a powerful build that completely breaks the game.
+                From controlling multiple characters to duplicating the bullets you shoot. The Upgrades are all unique and fun to experiment with.
+            </p>
+
+            <h2>Try It Out!</h2>
+<!--            set it to goldfish dreams page-->
+            <a href="https://de-heren-games.itch.io/goldfish-dreams" class="noStyle">Click here for Game Page</a>
+        </div>
+    </div>
+</div>
+
+<script src="projects.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+          content="Faelin Dingeman's Portfolio about gamedevelopment, design and more">
+    <meta name="keywords"
+          content="programming, portfolio, game, development, game development, faelin dingeman, unity, c#, gamedev, game design, pong, modern pong">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=-0.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap"
+          rel="stylesheet">
+    <title>Pong</title>
+</head>
+<!-- add project class to classes in body -->
+<body class="project">
+<div id="backgroundImage" class="modernPong"></div>
+<div id="progressBar"></div>
+<div id="scrollPath"></div>
+
+<div class="menuBar">
+    <p class="nameGoLeft highlightable headerItem" id="myName">Faelin Dingeman</p>
+    <p class="highlightable visible headerButton headerButton1 headerItem" id="aboutButton">ABOUT</p>
+    <p class="highlightable visible headerButton headerButton2 headerItem" id="projectsButton">PROJECTS</p>
+    <p class="highlightable visible headerButton headerButton3 headerItem" id="contactButton">CONTACT</p>
+</div>
+
+<!-- fill in information -->
+<div class="mainPage">
+    <div class="textFlexContainer projectPage">
+        <h1 class="pageTitle">ModernPong</h1>
+        <table>
+            <tr>
+                <th>Project Status</th>
+                <td>Finished</td>
+            </tr>
+            <tr>
+                <th>Project Type</th>
+                <td>solo / collage project</td>
+            </tr>
+            <tr>
+                <th>Project Duration</th>
+                <td>3 months</td>
+            </tr>
+            <tr>
+                <th>Engine</th>
+                <td>Unity</td>
+            </tr>
+        </table>
+
+        <div class="projectTextContainer">
+            <h1>About Modern Pong</h1>
+            <p>
+                Pong is known to be one of the
+                first digital games, and it
+                revolutionised the gaming
+                landscape. But that's all old
+                news. This is Modern Pong! The
+                highly anticipated reworked
+                version of the classic. Multiple
+                difficulty's, intricate AI,
+                local multiplayer and of course
+                beautiful visuals.
+            </p>
+
+            <h1>Features</h1>
+
+            <h2>Beautiful Visuals</h2>
+            <video class="gifOrImage" autoplay muted loop>
+                <source src="../media/modernpong/visuals.mp4" type="video/mp4">
+            </video>
+            <p>
+                Visuals is a core component that the original game was lacking.
+                I gave the game beautiful visuals, sfx and practical effects like screenshake to make the game feel a lot better to play than the original from 1972.
+            </p>
+
+            <h2>Settings</h2>
+            <video class="gifOrImage" autoplay muted loop>
+                <source src="../media/modernpong/settings.mp4" type="video/mp4">
+            </video>
+            <p>
+                As this was my first ever Unity project I wanted to make some of the most common features.
+                I made a simple settings menu with a volume slider and a difficulty selector that will change the whole game.
+            </p>
+
+            <h2>AI</h2>
+            <video class="gifOrImage" autoplay muted loop>
+                <source src="../media/modernpong/intriquateAI.mp4" type="video/mp4">
+            </video>
+            <p>
+                Playing games with friends and family is fun and all but not everyone has them at their disposal.
+                So I made a simple AI that will act as the second player when playing single player.
+            </p>
+        </div>
+    </div>
+</div>
+
+<script src="projects.js"></script>
+</body>
+</html>
