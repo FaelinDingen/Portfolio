@@ -12,52 +12,67 @@ body p {
     line-height: 2em;
 }
 
-.project .menuBar{
+.project .menuBar {
     position: fixed;
     width: 100vw;
 }
 
 .shine {
-    background-image: url("media/shine/shineBG.png");
+    background-image: url("media/shine/shineBG.webp");
 }
 
 .fidgetRunner {
-    background-image: url("media/fidgetrunner/fidgetBannerBG.png");
-}
-
-.pheatthph {
-    background-image: url("media/pheatthph/pheatthphBG.png");
+    background-image: url("media/fidgetrunner/fidgetBannerBG.webp");
 }
 
 .rAndR {
-    background-image: url("media/r&r/rifles&RevelationsBG.png");
+    background-image: url("media/r&r/rifles&RevelationsBG.webp");
 }
 
 .modernPong {
-    background-image: url("media/modernpong/modernPongBG.png");
+    background-image: url("media/modernpong/modernPongBG.webp");
 }
 
 .blenderPage {
-    background-image: url("media/3d/3DBG.png");
+    background-image: url("media/3d/3DBG.webp");
 }
 
 .goldfishDreams {
-    background-image: url("media/goldfishdreams/goldfishdreamsBG.png");
+    background-image: url("media/goldfishdreams/goldfishdreamsBG.webp");
+}
+
+.grangalyGrove {
+    background-image: url("media/grangalysgrove/grangalygrovebg.webp");
 }
 
 .project {
     text-align: left;
+}
+
+#backgroundImage {
     background-size: cover;
     background-repeat: no-repeat;
-    /* idk whats better, fixed bg or not, paralax would be cool but that's a lot of work */
-    /*background-attachment: fixed ;*/
+    /* set scale to 1.1 to stop blue bleeding from edges*/
+    scale: 1.1;
+    /* vw so that it doesnt unblur when zoomed out. 1vw = 10px cause 1080*/
+    filter: blur(1vw);
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    /* height gets automatically calculated on load in js */
+    height: 1px;
 }
 
 th, td {
     padding: 5px;
 }
 
-.project .textFlexContainer{
+.noStyle {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project .textFlexContainer {
     background-color: rgba(0, 0, 0, 0.5);
     width: 1000px;
 }
@@ -88,7 +103,7 @@ th, td {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 100%;                    /*might need to change to vh or vw*/
+    min-width: 100%; /*might need to change to vh or vw*/
     min-height: 100%;
     width: 100%; /*some problems with scaling screen size*/
 }
@@ -188,7 +203,8 @@ th, td {
 }
 
 .gifOrImage {
-    width: 100%;
+    max-width: 100%;
+
 }
 
 #aboutMe {
@@ -223,7 +239,7 @@ th, td {
 }
 
 #projects {
-    background:linear-gradient(#010816, #010509);
+    background: linear-gradient(#010816, #010509);
     position: relative;
     top: -200px;
     padding-bottom: 100px;
@@ -255,7 +271,7 @@ th, td {
     z-index: 3;
 }
 
-.cardGoRight{
+.cardGoRight {
     opacity: 0;
     animation: cardRight .7s ease-out 0s 1 normal both;
     z-index: 2;
@@ -286,7 +302,7 @@ th, td {
 }
 
 .cardBannerImage {
-    width: 400px;
+    width: 350px;
     height: 200px;
     position: relative;
     top: 0; /*might not need this */
@@ -299,7 +315,7 @@ th, td {
 
 .resources p {
     margin: 5px 0 0 0;
-    padding:0 10px 0 10px;
+    padding: 0 10px 0 10px;
     line-height: 1.5em;
     border-radius: 1000px;
     color: black;
@@ -308,22 +324,22 @@ th, td {
 
 .cs {
     background-color: #5bdb7b;
-    box-shadow: 0 0 15px  #5bdb7b;
+    box-shadow: 0 0 15px #5bdb7b;
 }
 
 .android {
     background-color: #88db2c;
-    box-shadow: 0 0 15px  #88db2c;
+    box-shadow: 0 0 15px #88db2c;
 }
 
 .blender {
     background-color: #dbb365;
-    box-shadow: 0 0 15px  #dbb365;
+    box-shadow: 0 0 15px #dbb365;
 }
 
 .unity {
     background-color: rgba(94, 229, 255, 0.85);
-    box-shadow: 0 0 15px  rgba(94, 229, 255, 0.85);
+    box-shadow: 0 0 15px rgba(94, 229, 255, 0.85);
 }
 
 .cardText {
@@ -345,16 +361,16 @@ th, td {
     top: 1162px;
 }
 
-.highlightable{
+.highlightable {
     cursor: pointer;
 }
 
-.highlightable:hover{
+.highlightable:hover {
     transition: color .5s ease-out;
     color: #00fff8;
 }
 
-.skillsContainerFlexContainer{
+.skillsContainerFlexContainer {
     display: flex;
     position: relative;
     top: -150px;
@@ -429,7 +445,7 @@ form {
     flex-direction: column;
 }
 
-form h1{
+form h1 {
     font-size: 50px;
     margin: 0 0 20px 0;
 }
@@ -444,7 +460,7 @@ form input, form textarea {
     border-radius: 10px;
 }
 
-form button{
+form button {
     padding: 15px;
     margin: 0 auto 0;
     background: white;
@@ -456,7 +472,7 @@ form button{
     width: 150px;
 }
 
-form img{
+form img {
     width: 75px;
 }
 
@@ -545,9 +561,10 @@ form a {
     background: rgba(0, 0, 0, 0);
     border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb {
-    width: 0;                /*change to 10px and comment out the 2 empty divs in html if u want to use the real scrollbar*/
-    background: linear-gradient(to top, #00fff8, rgba(0,255,248,0));              /*15004d*/
+    width: 0; /*change to 10px and comment out the 2 empty divs in html if u want to use the real scrollbar*/
+    background: linear-gradient(to top, #00fff8, rgba(0, 255, 248, 0)); /*15004d*/
     filter: blur(30px);
     /*border-radius: 10px;*/
 }
@@ -588,7 +605,7 @@ form a {
     filter: blur(10px);
 }
 
-#progressBar:after {    /* no idea what this does */
+#progressBar:after { /* no idea what this does */
     content: "";
     position: absolute;
     top: 0;
@@ -602,24 +619,24 @@ form a {
 /*animations*/
 
 @keyframes cardRight {
-    0%{
+    0% {
         opacity: 0;
         transform: translateX(400px);
     }
 
-    100%{
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
 @keyframes cardLeft {
-    0%{
+    0% {
         opacity: 0;
         transform: translateX(-400px);
     }
 
-    100%{
+    100% {
         opacity: 1;
         transform: translateX(0);
     }

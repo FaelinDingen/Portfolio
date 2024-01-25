@@ -9,6 +9,12 @@ for (const button of headerButtons) {
         gotoPage(button);
     });
 }
+setTimeout(applyBGHight, 50);
+
+function applyBGHight() {
+    document.getElementById("backgroundImage").style.height = (document.body.scrollHeight) + "px";
+}
+
 
 function gotoPage(button) {
     switch (button.id) {

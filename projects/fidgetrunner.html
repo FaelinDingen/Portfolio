@@ -15,7 +15,8 @@
     <title>FidgetRunner2</title>
 </head>
 <!-- add project class to classes in body -->
-<body class="project fidgetRunner">
+<body class="project">
+<div id="backgroundImage" class="fidgetRunner"></div>
 <div id="progressBar"></div>
 <div id="scrollPath"></div>
 
@@ -50,7 +51,7 @@
         </table>
 
         <div class="projectTextContainer">
-            <h3>About FidgetRunner 2</h3>
+            <h1>About FidgetRunner 2</h1>
             <p>Fidget Runner 2 is a sequel to the hit mobile game Fidget Runner.
                 My brother made the original for a school project about 5 years ago so when I got the assignment to
                 make a mobile game I immediately knew what I wanted to make.
@@ -59,7 +60,9 @@
             <h1>Features</h1>
 
             <h2>Motion Controls</h2>
-            <img class="gifOrImage" src="../media/fidgetrunner/settings.gif" alt="Motion Controls Gif">
+            <video class="gifOrImage" autoplay muted loop>
+                <source src="../media/fidgetrunner/settings.mp4" type="video/mp4">
+            </video>
             <p>
                 Since this is a mobile game I wanted to implement something that only the phone can do.
                 So inspired by the game "Send Me To Heaven" I decided to add a feature where you need to throw your phone in the air to jump.
@@ -67,20 +70,27 @@
             </p>
 
             <h2>Skins</h2>
-            <img class="gifOrImage" src="../media/fidgetrunner/skins.gif" alt="Skins Gif">
+            <video class="gifOrImage" autoplay muted loop>
+                <source src="../media/fidgetrunner/skins.mp4" type="video/mp4">
+            </video>
             <p>
                 This is around the same time I started learning shaders, so I wanted to add different skins that you can get with the in game currency "Fidgets".
             </p>
 
             <h2>Obstacles</h2>
-            <img class="gifOrImage" src="../media/fidgetrunner/obsticles.gif" alt="Obstacles Gif">
+            <video class="gifOrImage" autoplay muted loop>
+                <source src="../media/fidgetrunner/obsticles.mp4" type="video/mp4">
+            </video>
             <p>
                 The core gameplay loop is simple: begin a new run, avoid obstacles, collect Fidgets, and use them to get new skins.
                 The obstacles are procedurally generated so the course is different for every run you do.
             </p>
 
             <h2>Death Animation</h2>
-            <img class="gifOrImage" src="../media/fidgetrunner/death.gif" alt="Death Gif">
+
+            <video class="gifOrImage" autoplay muted loop>
+                <source src="../media/fidgetrunner/death.mp4" type="video/mp4">
+            </video>
             <p>
                 Another fun thing I did is use the player for the backboard of the death screen.
                 The play testers also liked this feature as the animation is quite humorous and dampens the frustration of dying.
