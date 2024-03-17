@@ -8,6 +8,10 @@ body {
     overflow-x: hidden;
 }
 
+.centeredText {
+    text-align: center;
+}
+
 body p {
     line-height: 2em;
 }
@@ -43,6 +47,10 @@ body p {
 
 .grangalyGrove {
     background-image: url("media/grangalysgrove/grangalygrovebg.webp");
+}
+
+.vampRush {
+    background-image: url("media/vamprush/background.webp");
 }
 
 .project {
@@ -205,6 +213,10 @@ th, td {
 .gifOrImage {
     max-width: 100%;
 
+}
+
+.gifOrImageVerticle {
+    max-width: 30%;
 }
 
 #aboutMe {
@@ -643,23 +655,22 @@ form a {
 }
 
 /*compatibility*/
-
-@media (max-width: 767px) {
-    .nameGoLeft {
-        margin-right: 50%;
-    }
-
-    .flexItem {
-        max-width: 80%;
-    }
-}
-
 /* Example for small screens (up to 767px) */
 @media (max-width: 767px) {
     .menuBar {
         /* Adjust properties for small screens */
         gap: 20px;
         font-size: 16px;
+    }
+
+    .headerButton {
+        opacity: 0;
+    }
+    .nameGoLeft {
+        margin-right: 0;
+    }
+    .flexItem {
+        max-width: 85%;
     }
 }
 
@@ -670,13 +681,28 @@ form a {
         gap: 40px;
         font-size: 18px;
     }
+    .headerButton {
+        opacity: 0;
+    }
+    .nameGoLeft {
+        margin-right: 0;
+    }
+    .flexItem {
+            max-width: 70%;
+    }
 }
 
 /* Example for large screens (992px and above) */
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1500px) {
     .menuBar {
         /* Adjust properties for large screens */
         gap: 100px;
         font-size: 24px;
+    }
+    .nameGoLeft {
+        margin-right: 60%;
+    }
+    .flexItem {
+        max-width: 60%;
     }
 }
