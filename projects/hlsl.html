@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Faelin Dingeman's Portfolio about gamedevelopment, design and more">
+    <meta name="keywords"
+        content="programming, portfolio, game, development, game development, faelin dingeman, unity, c#, gamedev, game design, goldfish dreams, shooter">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=-0.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <title>HLSL</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.png">
+</head>
+<!-- add project class to classes in body -->
+
+<body class="project">
+    <div id="backgroundImage" class="shaders"></div>
+    <div id="progressBar"></div>
+    <div id="scrollPath"></div>
+
+    <div class="menuBar">
+        <p class="nameGoLeft highlightable headerItem" id="myName">Faelin Dingeman</p>
+        <p class="highlightable visible headerButton headerButton1 headerItem" id="aboutButton">ABOUT</p>
+        <p class="highlightable visible headerButton headerButton2 headerItem" id="projectsButton">PROJECTS</p>
+        <p class="highlightable visible headerButton headerButton3 headerItem" id="contactButton">CONTACT</p>
+    </div>
+
+    <!-- fill in information -->
+    <div class="mainPage">
+        <div class="textFlexContainer projectPage">
+            <h1 class="pageTitle">HLSL</h1>
+            <table>
+                <tr>
+                    <th>Project Status</th>
+                    <td>Always Ongoing</td>
+                </tr>
+                <tr>
+                    <th>Project Duration</th>
+                    <td>Since August 2024</td>
+                </tr>
+                <tr>
+                    <th>Engine</th>
+                    <td>Unity</td>
+                </tr>
+            </table>
+
+            <div class="projectTextContainer">
+                <h1>About</h1>
+                <p>
+                    Visuals are one of the key components of games.
+                    Without proper visual polish your game would look bland and boring.
+                    Wanting to take my skills to another level i went and learnt HLSL.
+                    I love the freedom it gives you as a developer and of cource its aplicable to stuff outside of unity
+                    too!
+                    Programming on the gpu is so different and interesting that it made me fall in love with programing
+                    for the second time.
+                    <br>
+                    Here you can see some shaders that i have made. Ordered newest to oldest.
+                </p>
+
+                <h2>Custom PBR Shader</h2>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/shaders/sphere.mp4" type="video/mp4">
+                </video>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/shaders/texture.mp4" type="video/mp4">
+                </video>
+                <p>
+                    This shader uses albedo, roughness, normal and displacement textures in addition to the skybox to
+                    realisticly calculate lighting from every lightsource.
+                    It also has some fresnel to make it even more realistic.
+                    This shader was made to learn about these type of shaders so that i could get a basic idea of how to
+                    modify them.
+                </p>
+
+                <h2>Toon Shader</h2>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/shaders/toonshader.mp4" type="video/mp4">
+                </video>
+                <p>
+                    While working on my PBR shader i experimented a bit and quickly made a simple toon shader.
+                </p>
+
+                <h2>Texture Blending</h2>
+                <img class="gifOrImage" src="../media/shaders/texturegradient.webp" alt="Texture Blending">
+                <p>
+                    This shader uses a gradient to blend between 2 textures. This can be used in biome blending for
+                    example.
+                </p>
+
+                <h2>Healthbar</h2>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/shaders/healthbar.mp4" type="video/mp4">
+                </video>
+                <p>
+                    This healthbar shader uses a texture to decide what color to be. everything else is pure math.
+                    It flashes when below a certain amount and has an adjustible outline.
+                    Because its made using an SDF it can be reshaped into a lot of different types of healthbar by
+                    changing very little.
+                </p>
+
+                <h2>Waves</h2>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/shaders/waves.mp4" type="video/mp4">
+                </video>
+                <p>
+                    This is a simple vertex displacement shader used to simulate waves.
+                    This too uses SDF's so it can easily be changed to something like a radial ripple for example.
+                </p>
+
+                <h2>Pickup Halo</h2>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/shaders/pickuphalo.mp4" type="video/mp4">
+                </video>
+                <p>
+                    This transparent shader can be used as an pickup halo around an item or repurpaced for something
+                    else quite easily.
+                </p>
+
+                <!--<h2>Try It Out!</h2>
+                            set it to Egg page
+                <a href="https://de-heren-games.itch.io/goldfish-dreams" class="noStyle">Click here for Game Page</a>-->
+            </div>
+        </div>
+    </div>
+
+    <script src="projects.js"></script>
+</body>
+
+</html>

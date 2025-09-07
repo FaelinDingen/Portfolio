@@ -6,9 +6,9 @@ const myName = document.getElementById("myName");
 const projectsScroller = document.getElementById("projectsScroller");
 const aboutMeText = document.getElementById("aboutMeScroller");
 const contactScroller = document.getElementById("contactSendButton");
-const aboutButton = document.getElementById("aboutButton");
-const projectsButton = document.getElementById("projectsButton");
-const contactButton = document.getElementById("contactButton");
+const aboutButtons = document.getElementsByClassName("aboutButton");
+const projectsButtons = document.getElementsByClassName("projectsButton");
+const contactButtons = document.getElementsByClassName("contactButton");
 const scrollwatcher = document.createElement("div");
 const cards = document.getElementsByClassName("card");
 const skillFlexContainers = document.getElementsByClassName("skillFlexContainer");
@@ -36,15 +36,18 @@ window.addEventListener("scroll", minimalizeVideo);
 window.addEventListener("scroll", scroll);
 maximizeButton.addEventListener("click", buttonMaximize);
 myName.addEventListener("click", gotoTop);
-aboutButton.addEventListener("click", function () {
-    scrollToSomewhere(aboutMeText);
-});
-projectsButton.addEventListener("click", function () {
-    scrollToSomewhere(projectsScroller);
-});
-contactButton.addEventListener("click", function () {
-    scrollToSomewhere(contactScroller);
-});
+for (const aboutButton of aboutButtons)
+    aboutButton.addEventListener("click", function () {
+        scrollToSomewhere(aboutMeText);
+    });
+for (const projectsButton of projectsButtons)
+    projectsButton.addEventListener("click", function () {
+        scrollToSomewhere(projectsScroller);
+    });
+for (const contactButton of contactButtons)
+    contactButton.addEventListener("click", function () {
+        scrollToSomewhere(contactScroller);
+    });
 headerObserver.observe(scrollwatcher);
 cardObserver.observe(cards[1]);
 
@@ -61,6 +64,8 @@ for (const skillFlexContainer of skillFlexContainers) {
     })
     skillObserver.observe(skillFlexContainer);
 }
+
+
 
 //checks to see if the header is in the right phase
 function checkHeader() {
@@ -140,7 +145,7 @@ function showSkills(whatSkill) {
 }
 
 //only bug that there is is when resizing the window while the animation is playing
-function updateSkills(skill, destination, updating = {value: false}) {
+function updateSkills(skill, destination, updating = { value: false }) {
     if (!updating.value) {
         if (updating.value !== undefined) {
             updating.value = true;
@@ -152,12 +157,35 @@ function updateSkills(skill, destination, updating = {value: false}) {
 
     //gets vwWidth
     const vwWidth = ((parseFloat(getComputedStyle(skill).getPropertyValue('width')) / window.innerWidth) * 100).toFixed(2);     //need to figure out what this does
-    skill.querySelector(":nth-child(2)").innerHTML = Math.round((vwWidth / 60) * 100) + "%";
+    if (vwWidth / 60 * 100 > 75) {
+        skill.querySelector(":nth-child(2)").innerHTML = "Expert";
+    }
+    else if (vwWidth / 60 * 100 > 50) {
+        skill.querySelector(":nth-child(2)").innerHTML = "Advanced";
+    }
+    else if (vwWidth / 60 * 100 > 25) {
+        skill.querySelector(":nth-child(2)").innerHTML = "Intermediate";
+    }
+    else if (vwWidth / 60 * 100 > 0) {
+        skill.querySelector(":nth-child(2)").innerHTML = "Beginner";
+    }
     //stops if the updating is undefined and if the value is in range with its destination
     console.log(updating.value);
     if (updating.value === undefined && !inRange(((vwWidth / 60) * 100), destination)) {
         console.log("Returned");
-        skill.querySelector(":nth-child(2)").innerHTML = Math.round((vwWidth / 60) * 100) + "%";
+        if (vwWidth / 60 * 100 > 75) {
+            skill.querySelector(":nth-child(2)").innerHTML = "Expert";
+        }
+        else if (vwWidth / 60 * 100 > 50) {
+            skill.querySelector(":nth-child(2)").innerHTML = "Advanced";
+        }
+        else if (vwWidth / 60 * 100 > 25) {
+            skill.querySelector(":nth-child(2)").innerHTML = "Intermediate";
+        }
+        else if (vwWidth / 60 * 100 > 0) {
+            skill.querySelector(":nth-child(2)").innerHTML = "Beginner";
+        }
+
         skill.style.transition = "none";
         return;
     }

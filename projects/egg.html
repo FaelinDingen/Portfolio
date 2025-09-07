@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Faelin Dingeman's Portfolio about gamedevelopment, design and more">
+    <meta name="keywords"
+        content="programming, portfolio, game, development, game development, faelin dingeman, unity, c#, gamedev, game design, goldfish dreams, shooter">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=-0.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <title>Egg</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.png">
+</head>
+<!-- add project class to classes in body -->
+
+<body class="project">
+    <div id="backgroundImage" class="egg"></div>
+    <div id="progressBar"></div>
+    <div id="scrollPath"></div>
+
+    <div class="menuBar">
+        <p class="nameGoLeft highlightable headerItem" id="myName">Faelin Dingeman</p>
+        <p class="highlightable visible headerButton headerButton1 headerItem" id="aboutButton">ABOUT</p>
+        <p class="highlightable visible headerButton headerButton2 headerItem" id="projectsButton">PROJECTS</p>
+        <p class="highlightable visible headerButton headerButton3 headerItem" id="contactButton">CONTACT</p>
+    </div>
+
+    <!-- fill in information -->
+    <div class="mainPage">
+        <div class="textFlexContainer projectPage">
+            <h1 class="pageTitle">Egg</h1>
+            <table>
+                <tr>
+                    <th>Project Status</th>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <th>Project Type</th>
+                    <td>Game Jam</td>
+                </tr>
+                <tr>
+                    <th>Project Duration</th>
+                    <td>1 day</td>
+                </tr>
+                <tr>
+                    <th>Engine</th>
+                    <td>Unity</td>
+                </tr>
+            </table>
+
+            <div class="projectTextContainer">
+                <h1>About Egg</h1>
+                <p>
+                    Egg is the result of a 24 hour gamejam where the theme was simply "Egg".
+                    Egg is about an egg which just finnished school and needs to go home.
+                    Its home lies in a piecefull field of lushious green grass.
+                    But something doesnt feel right...
+                    What should be a peacefull roll home ends up being an intence chase because the whisks are after
+                    you!
+                    Dodge the whisks by using your Extra Mass Mode and make your way back to your peacefull home.
+                    <br>
+                    <br>
+                    It was an intence 24 hours and i definitely learnt a lot. And i came 2nd place!
+                    It was also featured on a Youtube Video which can be seen <a
+                        href="https://youtu.be/rVUJWGnnLyw?si=bFi7v_YaNiQT7v0p" class="highlightable link">here</a>
+                </p>
+
+                <h1>Features</h1>
+
+                <h2>Ethereal Gameplay</h2>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/egg/eatherialgameplay.mp4" type="video/mp4">
+                </video>
+                <p>
+                    I wanted the player to be relaxed and nostalgic when playing the game.
+                    So i made the main gameplay about rolling through fields of grass as an egg.
+                    The colors are oversaturated, the egg has a badly drawn face on it, the sky looks like a kids
+                    drawing.
+                    Its all quite otherworldy.
+                </p>
+
+                <h2>Extra Mass Mode</h2>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/egg/mass.mp4" type="video/mp4">
+                </video>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/egg/masssystem.mp4" type="video/mp4">
+                </video>
+                <p>
+                    To make the traversal of the hills more interesting i added the ability to increase your mass when
+                    clicking.
+                    This can be used to accelerate downhill and launch yourself with your accumulated momentum.
+                    <br>
+                    <br>
+                    When in the air it just adds velocity downwards but when on the ground i made it so that the
+                    velocity points downhill.
+                    This makes it feel way more natural.
+                    <br>
+                    The direction of the velocity can be seen by looking at the red rays.
+                </p>
+
+                <h2>Whisks</h2>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/egg/whisks.mp4" type="video/mp4">
+                </video>
+                <p>
+                    About thinking what an egg would be scared of i came to the conclusion that whisks are terrifying.
+                    After a certain amount of time rolling though the fields you will get an popup simply saying "Whisks
+                    are comming".
+                    Whisks spawn and chase you down. You will have to avoid them or else they will scramble you!
+                    Because of the unique shape of a whisk you can dodge and fly between the prongs or handle to
+                    outmaneuver them.
+                </p>
+
+                <h2>Home</h2>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/egg/home.mp4" type="video/mp4">
+                </video>
+                <p>
+                    Eventually by following the arrow at the top of your screen you will make it home.
+                    Here you are safe from the whisks.
+                    You will also be able to see your time.
+                </p>
+
+                <!--<h2>Try It Out!</h2>
+                            set it to Egg page
+                <a href="https://de-heren-games.itch.io/goldfish-dreams" class="noStyle">Click here for Game Page</a>-->
+            </div>
+        </div>
+    </div>
+
+    <script src="projects.js"></script>
+</body>
+
+</html>

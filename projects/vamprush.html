@@ -1,117 +1,134 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="description"
-          content="Faelin Dingeman's Portfolio about gamedevelopment, design and more">
+    <meta name="description" content="Faelin Dingeman's Portfolio about gamedevelopment, design and more">
     <meta name="keywords"
-          content="programming, portfolio, game, development, game development, faelin dingeman, unity, c#, gamedev, game design, pheatthph, ps1, classic, old game">
+        content="programming, portfolio, game, development, game development, faelin dingeman, unity, c#, gamedev, game design, pheatthph, ps1, classic, old game">
     <meta name="viewport"
-          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=-0.0">
+        content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=-0.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
     <title>GrangalyGrove</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.png">
 </head>
 <!-- add project class to classes in body -->
+
 <body class="project">
-<div id="backgroundImage" class="vampRush"></div>
-<div id="progressBar"></div>
-<div id="scrollPath"></div>
+    <div id="backgroundImage" class="vampRush"></div>
+    <div id="progressBar"></div>
+    <div id="scrollPath"></div>
 
-<div class="menuBar">
-    <p class="nameGoLeft highlightable headerItem" id="myName">Faelin Dingeman</p>
-    <p class="highlightable visible headerButton headerButton1 headerItem" id="aboutButton">ABOUT</p>
-    <p class="highlightable visible headerButton headerButton2 headerItem" id="projectsButton">PROJECTS</p>
-    <p class="highlightable visible headerButton headerButton3 headerItem" id="contactButton">CONTACT</p>
-</div>
+    <div class="menuBar">
+        <p class="nameGoLeft highlightable headerItem" id="myName">Faelin Dingeman</p>
+        <p class="highlightable visible headerButton headerButton1 headerItem" id="aboutButton">ABOUT</p>
+        <p class="highlightable visible headerButton headerButton2 headerItem" id="projectsButton">PROJECTS</p>
+        <p class="highlightable visible headerButton headerButton3 headerItem" id="contactButton">CONTACT</p>
+    </div>
 
-<!-- fill in information -->
-<div class="mainPage">
-    <div class="textFlexContainer projectPage">
-        <h1 class="pageTitle">Vamp Rush</h1>
-        <table>
-            <tr>
-                <th>Project Status</th>
-                <td>Finished</td>
-            </tr>
-            <tr>
-                <th>Project Type</th>
-                <td>School Project</td>
-            </tr>
-            <tr>
-                <th>Project Duration</th>
-                <td>2 Months</td>
-            </tr>
-            <tr>
-                <th>Engine</th>
-                <td>Unity</td>
-            </tr>
-            <!--delete if redundant-->
-            <tr>
-                <th>Role</th>
-                <td>Main Programmer / <br> Group Leader</td>
-            </tr>
-        </table>
+    <!-- fill in information -->
+    <div class="mainPage">
+        <div class="textFlexContainer projectPage">
+            <h1 class="pageTitle">Vamp Rush</h1>
+            <table>
+                <tr>
+                    <th>Project Status</th>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <th>Project Type</th>
+                    <td>School Project</td>
+                </tr>
+                <tr>
+                    <th>Project Duration</th>
+                    <td>2 Months</td>
+                </tr>
+                <tr>
+                    <th>Engine</th>
+                    <td>Unity</td>
+                </tr>
+                <!--delete if redundant-->
+                <tr>
+                    <th>Role</th>
+                    <td>Main Programmer / <br> Group Leader</td>
+                </tr>
+            </table>
 
-        <div class="projectTextContainer">
-            <h1>About Vamp Rush</h1>
-            <p>Vamp Rush was created as a school assignment. The software developer students needed to team up with digital design and motion students to create a game.<br>
-                We were a group of 3 software developers and 4 artists. <br>
-                As I had the most experience my role was mostly to help others out, implement the art and to combine and optimise the scripts that the other software developers made.<br>
-                This was also the first time we worked using the SCRUM method. I was the scrum leader and the process went really well.<br>
-                Overall im happy with how the game turned out, and you can try it out on the playstore (Link is at the bottom of this page).
-            </p>
+            <div class="projectTextContainer">
+                <h1>About Vamp Rush</h1>
+                <p>Vamp Rush was created as a school assignment. The software developer students needed to team up with
+                    digital design and motion students to create a game.<br>
+                    We were a group of 3 software developers and 4 artists. <br>
+                    As I had the most experience my role was mostly to help others out, implement the art and to combine
+                    and optimise the scripts that the other software developers made.<br>
+                    This was also the first time we worked using the SCRUM method. I was the scrum leader and the
+                    process went really well.<br>
+                    Overall im happy with how the game turned out, and you can try it out on the playstore (Link is at
+                    the bottom of this page).
+                </p>
 
-            <h1>Features</h1>
+                <h1>Features</h1>
 
-            <h2>Smooth TitleScreen</h2>
-            <video class="gifOrImageVerticle" autoplay muted loop>
-                <source src="../media/vamprush/menu.mp4" type="video/mp4">
-            </video>
-            <video class="gifOrImageVerticle" autoplay muted loop>
-                <source src="../media/vamprush/flying.mp4" type="video/mp4">
-            </video>
-            <p>
-                As this is a mobile game I wanted to make the title screen simple and easy to navigate.
-                I used Unity animations and buttons for most of this and im very happy with what I made.
-                There are 4 total buttons: one for opening the shop where you can upgrade stuff, another one for the settings panel where you can adjust your volume for the music and sfx separately, another one for the credits and lastly one to close the game.
-            </p>
+                <h2>Smooth TitleScreen</h2>
+                <video class="gifOrImageVerticle" autoplay muted loop>
+                    <source src="../media/vamprush/menu.mp4" type="video/mp4">
+                </video>
+                <video class="gifOrImageVerticle" autoplay muted loop>
+                    <source src="../media/vamprush/flying.mp4" type="video/mp4">
+                </video>
+                <p>
+                    As this is a mobile game I wanted to make the title screen simple and easy to navigate.
+                    I used Unity animations and buttons for most of this and im very happy with what I made.
+                    There are 4 total buttons: one for opening the shop where you can upgrade stuff, another one for the
+                    settings panel where you can adjust your volume for the music and sfx separately, another one for
+                    the credits and lastly one to close the game.
+                </p>
 
-            <h2>GamePlay</h2>
-            <video class="gifOrImageVerticle" autoplay muted loop>
-                <source src="../media/vamprush/gameplay.mp4" type="video/mp4">
-            </video>
-            <p>
-                The main gameplay-loop is that you are falling and need to dodge obstacles. When you get hit you fail and need to restart.
-                The moving to the left and right is done by tilting your phone using the gyroscope.
-                After a while of falling you will enter a cave where there are stalactite's, mine carts and old platform that you need to dodge.
-                There are also breakable platforms that you can fall through breaking them.
-                When you get to the bottom of the cave you will discover a big pile of energy drinks labeled "VampEnery".
-                Your character hits this pile with full force transforming him into a-
-            </p>
+                <h2>GamePlay</h2>
+                <video class="gifOrImageVerticle" autoplay muted loop>
+                    <source src="../media/vamprush/gameplay.mp4" type="video/mp4">
+                </video>
+                <p>
+                    The main gameplay-loop is that you are falling and need to dodge obstacles. When you get hit you
+                    fail and need to restart.
+                    The moving to the left and right is done by tilting your phone using the gyroscope.
+                    After a while of falling you will enter a cave where there are stalactite's, mine carts and old
+                    platform that you need to dodge.
+                    There are also breakable platforms that you can fall through breaking them.
+                    When you get to the bottom of the cave you will discover a big pile of energy drinks labeled
+                    "VampEnery".
+                    Your character hits this pile with full force transforming him into a-
+                </p>
 
-            <h2>Bat!</h2>
-            <video class="gifOrImageVerticle" autoplay muted loop>
-                <source src="../media/vamprush/bat.mp4" type="video/mp4">
-            </video>
-            <p>
-                After transforming into the bat you get a fun little energy bar on the left side of your screen.
-                The more empty it gets the darker it will be. you can fill it back up by collecting energy cans on your way back up the cave.
-                Yes, you heard me correct. As the bat you need to get out of the cave, and you do that by flying upwards by tapping your phone.
-                The energy cans also act as the form of in game currency that you can use in the shop to upgrade stuff.
-                Those breakable platforms that you broke come in handy now as the bat cant break them. So the more you break on the way down the easier the way up is.
+                <h2>Bat!</h2>
+                <video class="gifOrImageVerticle" autoplay muted loop>
+                    <source src="../media/vamprush/bat.mp4" type="video/mp4">
+                </video>
+                <p>
+                    After transforming into the bat you get a fun little energy bar on the left side of your screen.
+                    The more empty it gets the darker it will be. you can fill it back up by collecting energy cans on
+                    your way back up the cave.
+                    Yes, you heard me correct. As the bat you need to get out of the cave, and you do that by flying
+                    upwards by tapping your phone.
+                    The energy cans also act as the form of in game currency that you can use in the shop to upgrade
+                    stuff.
+                    Those breakable platforms that you broke come in handy now as the bat cant break them. So the more
+                    you break on the way down the easier the way up is.
 
-            </p>
+                </p>
 
-            <h1>Try It Out!</h1>
-            <!--            also add the android playstore page when uploaded-->
-            <a href="https://faelin-dingen.itch.io/vamprush" class="noStyle">Click here for Game Page</a>
+                <h1>Try It Out!</h1>
+                <!--            also add the android playstore page when uploaded-->
+                <a href="https://faelin-dingen.itch.io/vamprush" class="noStyle">Click here for Game Page</a>
+            </div>
         </div>
     </div>
-</div>
 
-<script src="projects.js"></script>
+    <script src="projects.js"></script>
 </body>
+
 </html>
