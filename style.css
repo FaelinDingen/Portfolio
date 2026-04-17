@@ -69,6 +69,22 @@ body p {
     background-image: url("media/shaders/bg.webp");
 }
 
+.fe2 {
+    ;background-image: url("media/faelinengine2/bg.webp");
+    background-size: 100vw !important;
+    background-repeat: repeat-y !important;
+}
+
+.dsb {
+    background-image: url("media/deepspacebuilder/bg.webp");
+    background-size: 100vw !important;
+    background-repeat: repeat-y !important;
+}
+
+.cfp {
+    background-image: url("media/coolestfishinthepond/bg.webp");
+}
+
 .project {
     text-align: left;
 }
@@ -299,7 +315,7 @@ td {
     background-color: #01060d;
     overflow: hidden;
     border: 2px solid #7f7f7f;
-    box-shadow: none;
+    box-shadow: 0px 0px 0px 0px rgba(94, 229, 255, 0);
     border-radius: 20px;
     transition: border .3s ease-out, box-shadow .3s ease-out, scale .3s ease-out;
     width: 350px;
@@ -320,8 +336,10 @@ td {
 }
 
 .card:hover {
+    z-index: 4;
     border: 2px solid rgba(94, 229, 255, 0.85);
-    box-shadow: -1px -1px 52px -15px rgba(94, 229, 255, 0.85);
+    /*box-shadow: -1px -1px 52px -15px rgba(94, 229, 255, 0.85);*/
+    box-shadow: 0px 0px 30px 3px rgba(94, 229, 255, 0.85);
     scale: 110%;
 }
 

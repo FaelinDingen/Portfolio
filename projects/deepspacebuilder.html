@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Faelin Dingeman's Portfolio about gamedevelopment, design and more">
+    <meta name="keywords"
+        content="programming, portfolio, game, development, game development, faelin dingeman, unity, c#, gamedev, game design, goldfish dreams, shooter">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=-0.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <title>Deep Space Builder</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.png">
+</head>
+<!-- add project class to classes in body -->
+
+<body class="project">
+    <div id="backgroundImage" class="dsb"></div>
+    <div id="progressBar"></div>
+    <div id="scrollPath"></div>
+
+    <div class="menuBar">
+        <p class="nameGoLeft highlightable headerItem" id="myName">Faelin Dingeman</p>
+        <p class="highlightable visible headerButton headerButton1 headerItem" id="aboutButton">ABOUT</p>
+        <p class="highlightable visible headerButton headerButton2 headerItem" id="projectsButton">PROJECTS</p>
+        <p class="highlightable visible headerButton headerButton3 headerItem" id="contactButton">CONTACT</p>
+    </div>
+
+    <!-- fill in information -->
+    <div class="mainPage">
+        <div class="textFlexContainer projectPage">
+            <h1 class="pageTitle">Deep-Space Builder</h1>
+            <table>
+                <tr>
+                    <th>Project Status</th>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <th>Project Type</th>
+                    <td>Exam</td>
+                </tr>
+                <tr>
+                    <th>Project Duration</th>
+                    <td>3 weeks</td>
+                </tr>
+                <tr>
+                    <th>Engine</th>
+                    <td>Unity</td>
+                </tr>
+            </table>
+
+            <div class="projectTextContainer">
+                <h1>About Deep-Space Builder</h1>
+                <p>
+                    For my final exam at collage I needed to create a game about flying spaceships in a team of 4. <br>
+                    We created a ship building game where you go out to collect resources and use that to build new stuff on your ship.<br>
+                    I was in charge of the ship movement, menu screens, thruster and turret logic and a couple of other things.<br>
+                    There were quite a lot of challenges along the way but eventually it all worked out. <br>
+                    We got full marks on the project and it was a wonderfully final collage project.
+                </p>
+
+                <h1>Features</h1>
+
+                <h2>Interactive main menu</h2>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/deepspacebuilder/mainmenu.mp4" type="video/mp4">
+                </video>
+                <p>
+                    For the main menu I wanted a nice showcase of some cool things in the game. <br>
+                    I first added the hangar in the background then added some other atmospheric things like asteroid and fog.<br>
+                    I then added a couple of different enemy ships that attack the players mouse. <br>
+                    I positioned these so that they will be able to hit each other for some cool interactivity.
+                </p>
+
+                <h2>Ship builder</h2>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/deepspacebuilder/shipbuilder.mp4" type="video/mp4">
+                </video>
+                <p>
+                    The ship builder is a big part of the game. <br>
+                    It has a lot of features like mirroring, snapping and selling components. <br>
+                    There are a lot of components that you could get. <br>
+                    They are split up into 4 classes: Fuel-Tanks, Thrusters, Turrets and Blocks.
+                </p>
+
+                <h2>Mining asteroids</h2>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/deepspacebuilder/astroidmining.mp4" type="video/mp4">
+                </video>
+                <p>
+                    To get resources you will need to go out and mine asteroids. <br>
+                    You can do this by shooting them and picking up the bits.
+                </p>
+
+                <h2>Late-game</h2>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/deepspacebuilder/lategame.mp4" type="video/mp4">
+                </video>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/deepspacebuilder/lategame2.mp4" type="video/mp4">
+                </video>
+                <p>
+                    Late-game you will most likely have a bit ship with a lot of turrets and thrusters. <br>
+                    Enemy ships will be attacking you and destroying components. <br>
+                    You need to survive as long as possible and see which rank you can get.
+                </p>
+
+                <!--<h2>Try It Out!</h2>
+                            set it to Egg page
+                <a href="https://de-heren-games.itch.io/goldfish-dreams" class="noStyle">Click here for Game Page</a>-->
+            </div>
+        </div>
+    </div>
+
+    <script src="projects.js"></script>
+</body>
+
+</html>

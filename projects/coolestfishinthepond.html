@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Faelin Dingeman's Portfolio about gamedevelopment, design and more">
+    <meta name="keywords"
+        content="programming, portfolio, game, development, game development, faelin dingeman, unity, c#, gamedev, game design, goldfish dreams, shooter">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=-0.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <title>Coolest Fish in the Pond</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.png">
+</head>
+<!-- add project class to classes in body -->
+
+<body class="project">
+    <div id="backgroundImage" class="cfp"></div>
+    <div id="progressBar"></div>
+    <div id="scrollPath"></div>
+
+    <div class="menuBar">
+        <p class="nameGoLeft highlightable headerItem" id="myName">Faelin Dingeman</p>
+        <p class="highlightable visible headerButton headerButton1 headerItem" id="aboutButton">ABOUT</p>
+        <p class="highlightable visible headerButton headerButton2 headerItem" id="projectsButton">PROJECTS</p>
+        <p class="highlightable visible headerButton headerButton3 headerItem" id="contactButton">CONTACT</p>
+    </div>
+
+    <!-- fill in information -->
+    <div class="mainPage">
+        <div class="textFlexContainer projectPage">
+            <h1 class="pageTitle">Coolest Fish in the Pond</h1>
+            <table>
+                <tr>
+                    <th>Project Status</th>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <th>Project Type</th>
+                    <td>Hobby</td>
+                </tr>
+                <tr>
+                    <th>Project Duration</th>
+                    <td>3 weeks</td>
+                </tr>
+                <tr>
+                    <th>Engine</th>
+                    <td>Unity</td>
+                </tr>
+            </table>
+
+            <div class="projectTextContainer">
+                <h1>About Coolest Fish in the Pond</h1>
+                <p>
+                    Coolest Fish in the Pond is a game that I made to show my internship what I can do and what my skills are. <br>
+                    I am very happy with the final product as it shows a lot of growth from my previous fps-game. <br>
+                    More in depth AI, gun-play, map generation all show this off nicely.
+
+                    In the game you play as a WW1 Sapper. <br>
+                    A soldier that mainly expands trenches. <br>
+                    You need to navigate to the enemy side of the trench to explode them. <br>
+                    During this you will encounter enemies that you will need to take care of.
+                </p>
+
+                <h1>Features</h1>
+
+                <h2>Map generation</h2>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/coolestfishinthepond/mapgeneration.mp4" type="video/mp4">
+                </video>
+                <p>
+                    Evey time you get to the end of a trench you will see a draggable spot. <br>
+                    After interacting with it you will be presented with 3 random options for a layout. <br>
+                    The selected layout will spawn in at the dig-site. Continue doing this until you reach the end. <br>
+                    <br>
+                    The options are not always random though. <br>
+                    If the tile that you are going to build is neighbouring another non-empty tile it will take that into account. <br>
+                    If it is neighbouring with a wall it will not present the option to create a layout that goes over there. <br>
+                    If it is neighbouring with a door it will guarantee tiles that also have an opening there so that they can connect. <br>
+                    This makes it that the system can never break and is always nice and consistent.
+                </p>
+
+                <h2>Animations</h2>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/coolestfishinthepond/animations.mp4" type="video/mp4">
+                </video>
+                <p>
+                    I've spent a lot of time working on animations for this project. <br>
+                    The gun in particular i am very proud of. <br>
+                    It is seamless, the shooting works, it all aligns with the logic and you can stop the reload during the animation.
+                </p>
+
+                <h2>Combat</h2>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/coolestfishinthepond/combat.mp4" type="video/mp4">
+                </video>
+                <p>
+                    The enemies have different colliders for each body part. <br>
+                    Using these i can add different damage multiplier when they are shot in different places. <br>
+                    The combat is also realistic. <br>
+                    The enemies miss shots and the player needs to be patient to be accurate. <br>
+                </p>
+
+                <h2>Artillery fire</h2>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/coolestfishinthepond/artillery.mp4" type="video/mp4">
+                </video>
+                <p>
+                    After a couple of minutes artillery fire will come falling down. <br>
+                    Standing too close to it will harm you and the further away you are the less it will do. <br>
+                    It will rain down for a bit and then stop for a while. <br>
+                    But it will come back.
+                </p>
+
+                <!--<h2>Try It Out!</h2>
+                            set it to Egg page
+                <a href="https://de-heren-games.itch.io/goldfish-dreams" class="noStyle">Click here for Game Page</a>-->
+            </div>
+        </div>
+    </div>
+
+    <script src="projects.js"></script>
+</body>
+
+</html>

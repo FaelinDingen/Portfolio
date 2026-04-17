@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Faelin Dingeman's Portfolio about gamedevelopment, design and more">
+    <meta name="keywords"
+        content="programming, portfolio, game, development, game development, faelin dingeman, unity, c#, gamedev, game design, goldfish dreams, shooter">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=-0.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <title>Faelin Engine 2</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.png">
+</head>
+<!-- add project class to classes in body -->
+
+<body class="project">
+    <div id="backgroundImage" class="fe2"></div>
+    <div id="progressBar"></div>
+    <div id="scrollPath"></div>
+
+    <div class="menuBar">
+        <p class="nameGoLeft highlightable headerItem" id="myName">Faelin Dingeman</p>
+        <p class="highlightable visible headerButton headerButton1 headerItem" id="aboutButton">ABOUT</p>
+        <p class="highlightable visible headerButton headerButton2 headerItem" id="projectsButton">PROJECTS</p>
+        <p class="highlightable visible headerButton headerButton3 headerItem" id="contactButton">CONTACT</p>
+    </div>
+
+    <!-- fill in information -->
+    <div class="mainPage">
+        <div class="textFlexContainer projectPage">
+            <h1 class="pageTitle">Faelin Engine 2</h1>
+            <table>
+                <tr>
+                    <th>Project Status</th>
+                    <td>Finished</td>
+                </tr>
+                <tr>
+                    <th>Project Type</th>
+                    <td>Research</td>
+                </tr>
+                <tr>
+                    <th>Project Duration</th>
+                    <td>4 months</td>
+                </tr>
+                <tr>
+                    <th>Library</th>
+                    <td>SFML</td>
+                </tr>
+            </table>
+
+            <div class="projectTextContainer">
+                <h1>About FE2</h1>
+                <p>
+                    Game engines have always been fascinating to me. <br>
+                    Known as one of the hardest things to create on your own I decided to give it my best. <br>
+                    It resulted in a simple yet well constructed engine I have labeled the "Faelin Engine 2". <br>
+                    I also created a little game to go along with it to show off all the features.
+                    <br>
+                    <br>
+                    It was quite a struggle. Debugging complex bugs, refactoring the whole system when it got messy and of course working around circular dependency's. <br>
+                    But I learn a lot about how game engines are constructed and how to expand upon them. <br>
+                    This project made me fall in love with game engine architecture, and I am certainly not done making engines yet. <br>
+                </p>
+
+                <h1>Features</h1>
+
+                <h2>Dynamic Widgets</h2>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/faelinengine2/widgets.mp4" type="video/mp4">
+                </video>
+                <p>
+                    One of the first things I created where dynamic widgets. <br>
+                    These widgets are created by pressing the arrow keys in the direction you want them to appear. <br>
+                    They will be created it the right position and size. <br>
+                    To remove them you can hold left ctrl and press the desired arrow key. <br>
+                    It destroys the widget and removes it out of the vector. <br>
+                    All the other widgets will get recalculated accordingly.
+                </p>
+
+                <h2>The Engine Architecture</h2>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/faelinengine2/scenesystem.mp4" type="video/mp4">
+                </video>
+                <p>
+                    The engine is constructed in an agile and modular way. <br>
+                    All the way at the bottom is the Engine class. This class holds the other systems like the SceneManager. <br>
+                    The SceneManager holds all scenes. These scenes will be loaded from a folder that contains JSon files and puts them into a vector. <br>
+                    A singular Scene object holds some useful information. It also holds all GameObjects that are present in the scene. <br>
+                    <br>
+                    Now we have gotten to the point where you see things on the screen. <br>
+                    The GameObjects are basically empty containers for components. <br>
+                    There are a lot of different components such as the Transform, SpriteRenderer, Rigidbody and way more with each of them containing their own logic and values.<br>
+                    <br>
+                    All of this gets saved into a JSon file and gets loaded whenever needed.
+                </p>
+
+                <h2>Level Creation</h2>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/faelinengine2/editor.mp4" type="video/mp4">
+                </video>
+                <p>
+                    Each object with the transform component has a unique gimbal that lets you change its transform while in the editor mode. <br>
+                    Using this and the number keys on my keyboard to spawn in set objects i have created 20 levels for the demo game.
+                </p>
+
+                <h2>Upgrades</h2>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/faelinengine2/upgrades1.mp4" type="video/mp4">
+                </video>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/faelinengine2/upgrades2.mp4" type="video/mp4">
+                </video>
+                <p>
+                    I have restricted the transform gimbal to whatever stage the player is on. <br>
+                    It can pick up an upgrade to mutate into the next form and whilst doing so it unlocks the next ability lke rotation for example.
+                </p>
+
+                <h2>Tricky Puzzles</h2>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/faelinengine2/puzzles.mp4" type="video/mp4">
+                </video>
+                <p>
+                    Some of the later levels have some quite thought out puzzles where the player needs to utilize all of their tools to complete it. <br>
+                    It was quite difficult to thing of ideas that remain fun and fresh but i would say that i have completed my job in this aspect.
+                </p>
+
+                <h2>Escape</h2>
+                <video class="gifOrImage" autoplay muted loop>
+                    <source src="../media/faelinengine2/escape.mp4" type="video/mp4">
+                </video>
+                <p>
+                    To finnish the game off i created a little escape sequence. <br>
+                    The player goes through the pipes of the facility and escapes into your desktop wallpaper.
+                </p>
+
+                <h2>Check It Out!</h2>
+                <a href="https://github.com/FaelinDingen/FaelinEngine2" class="noStyle">Click here for repository page</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="projects.js"></script>
+</body>
+
+</html>
